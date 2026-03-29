@@ -1,0 +1,14 @@
+{
+  "name": "my-skills",
+  "version": "1.0.0",
+  "description": "Claude Code skills by stngcoding",
+  "bin": {
+    "skills": "./bin/cli.js"
+  },
+  "engines": {
+    "node": ">=16.7.0"
+  },
+  "keywords": ["claude", "claude-code", "skills", "ai"],
+  "author": "Son Tung <tungtshp99@gmail.com>",
+  "license": "MIT"
+}
