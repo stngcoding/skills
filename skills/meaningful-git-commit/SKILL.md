@@ -2,11 +2,6 @@
 name: meaningful-git-commit
 description: Generate clear, maintainable git commit messages for human reviewers and AI agents using conventional commit format
 
-version: 3.0.0
-author: Son Tung
-email: tungtshp99@gmail.com
-created: 2026-03-03
-
 trigger_phrases:
   - create git commit
   - generate commit message
@@ -35,7 +30,7 @@ git diff --cached --stat
 
 Each commit does ONE thing — one feature, one fix, one refactor. Each must be independently revertable.
 
-**Always group:** implementation + its tests, tightly coupled layers (model → repo → bloc) for the same feature, changes where reverting one breaks others.
+**Always group:** implementation + its tests, tightly coupled layers (model → repo → viewmodel) for the same feature, changes where reverting one breaks others.
 
 **Always split:** different features/scopes, different types (feat + chore), independent bugs, generated files from logic changes.
 
@@ -113,7 +108,3 @@ semantics; named factory makes deserialization intent explicit.
 - `references/context-writing.md` — quality gate, anti-patterns, sentence starters, state-machine fix guidance. Read before writing non-trivial feat/fix commits.
 - `references/examples.md` — additional commit patterns (trivial features, tests, config, grouped changes).
 - `references/error-prevention.md` — common mistakes: wrong type, bad scope, description traps.
-
-## Model
-
-**Haiku** — lightweight task, cost-efficient.
