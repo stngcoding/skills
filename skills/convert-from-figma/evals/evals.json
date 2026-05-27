@@ -1,0 +1,209 @@
+{
+  "skill_name": "convert-from-figma",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/convert-from-figma https://www.figma.com/design/ouDvyA9Zx1I4yg0ItrEaRG/Super-AI---Version-1?node-id=5001-18579&m=dev",
+      "expected_output": "Flutter widget(s) implementing the Figma frame with full design token usage and pixel-perfect layout",
+      "files": [],
+      "assertions": [
+        {
+          "name": "calls_get_metadata_first",
+          "description": "Calls get_metadata as the first Figma MCP call to map the node tree",
+          "type": "tool_call_order"
+        },
+        {
+          "name": "calls_get_design_context_per_section",
+          "description": "Calls get_design_context on individual sections (not just once for the whole frame)",
+          "type": "tool_call_count"
+        },
+        {
+          "name": "calls_get_variable_defs",
+          "description": "Calls get_variable_defs to fetch Figma design tokens",
+          "type": "tool_call"
+        },
+        {
+          "name": "calls_get_screenshot_hires",
+          "description": "Calls get_screenshot with maxDimension >= 2048",
+          "type": "tool_call"
+        },
+        {
+          "name": "builds_layout_blueprint",
+          "description": "Produces a structured layout blueprint with dimensions, spacing, typography, colors before writing code",
+          "type": "output_contains"
+        },
+        {
+          "name": "discovers_project_tokens",
+          "description": "Discovers the project's design token files (spacing, colors, typography) by searching the codebase",
+          "type": "file_read"
+        },
+        {
+          "name": "reads_layout_mapping_reference",
+          "description": "Reads references/layout-mapping.md during implementation",
+          "type": "file_read"
+        },
+        {
+          "name": "uses_project_tokens",
+          "description": "Uses the project's discovered token system (not raw literals) for colors, spacing, typography",
+          "type": "output_contains"
+        },
+        {
+          "name": "audits_shared_widgets",
+          "description": "Checks lib/widgets/ or similar for existing shared widgets before building new ones",
+          "type": "file_read"
+        },
+        {
+          "name": "reuses_shared_widgets",
+          "description": "Actually uses discovered shared widgets (e.g. bottom sheet, switch, dropdown) in the output",
+          "type": "output_contains"
+        },
+        {
+          "name": "does_not_invoke_figma_implement_design",
+          "description": "Does NOT invoke the figma:figma-implement-design skill (this skill is self-contained)",
+          "type": "tool_call_absent"
+        },
+        {
+          "name": "widget_is_class_not_function",
+          "description": "Widget is a class extending StatelessWidget or StatefulWidget, not a function",
+          "type": "output_contains"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/convert-from-figma https://www.figma.com/design/ouDvyA9Zx1I4yg0ItrEaRG/Super-AI---Version-1?node-id=4855-8602&m=dev",
+      "expected_output": "Flutter widget(s) implementing the Figma frame with full design token usage and pixel-perfect layout",
+      "files": [],
+      "assertions": [
+        {
+          "name": "calls_get_metadata_first",
+          "description": "Calls get_metadata as the first Figma MCP call to map the node tree",
+          "type": "tool_call_order"
+        },
+        {
+          "name": "calls_get_design_context_per_section",
+          "description": "Calls get_design_context on individual sections (not just once for the whole frame)",
+          "type": "tool_call_count"
+        },
+        {
+          "name": "calls_get_variable_defs",
+          "description": "Calls get_variable_defs to fetch Figma design tokens",
+          "type": "tool_call"
+        },
+        {
+          "name": "calls_get_screenshot_hires",
+          "description": "Calls get_screenshot with maxDimension >= 2048",
+          "type": "tool_call"
+        },
+        {
+          "name": "builds_layout_blueprint",
+          "description": "Produces a structured layout blueprint before writing code",
+          "type": "output_contains"
+        },
+        {
+          "name": "discovers_project_tokens",
+          "description": "Discovers the project's design token files (spacing, colors, typography) by searching the codebase",
+          "type": "file_read"
+        },
+        {
+          "name": "reads_layout_mapping_reference",
+          "description": "Reads references/layout-mapping.md during implementation",
+          "type": "file_read"
+        },
+        {
+          "name": "uses_project_tokens",
+          "description": "Uses the project's discovered token system (not raw literals) for colors, spacing, typography",
+          "type": "output_contains"
+        },
+        {
+          "name": "audits_shared_widgets",
+          "description": "Checks lib/widgets/ or similar for existing shared widgets before building new ones",
+          "type": "file_read"
+        },
+        {
+          "name": "reuses_shared_widgets",
+          "description": "Actually uses discovered shared widgets in the output",
+          "type": "output_contains"
+        },
+        {
+          "name": "does_not_invoke_figma_implement_design",
+          "description": "Does NOT invoke figma:figma-implement-design skill",
+          "type": "tool_call_absent"
+        },
+        {
+          "name": "widget_is_class_not_function",
+          "description": "Widget is a class extending StatelessWidget or StatefulWidget",
+          "type": "output_contains"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "/convert-from-figma https://www.figma.com/design/ouDvyA9Zx1I4yg0ItrEaRG/Super-AI---Version-1?node-id=4855-9828&m=dev",
+      "expected_output": "Flutter widget(s) implementing the Figma frame with full design token usage and pixel-perfect layout",
+      "files": [],
+      "assertions": [
+        {
+          "name": "calls_get_metadata_first",
+          "description": "Calls get_metadata as the first Figma MCP call to map the node tree",
+          "type": "tool_call_order"
+        },
+        {
+          "name": "calls_get_design_context_per_section",
+          "description": "Calls get_design_context on individual sections (not just once for the whole frame)",
+          "type": "tool_call_count"
+        },
+        {
+          "name": "calls_get_variable_defs",
+          "description": "Calls get_variable_defs to fetch Figma design tokens",
+          "type": "tool_call"
+        },
+        {
+          "name": "calls_get_screenshot_hires",
+          "description": "Calls get_screenshot with maxDimension >= 2048",
+          "type": "tool_call"
+        },
+        {
+          "name": "builds_layout_blueprint",
+          "description": "Produces a structured layout blueprint before writing code",
+          "type": "output_contains"
+        },
+        {
+          "name": "discovers_project_tokens",
+          "description": "Discovers the project's design token files by searching the codebase",
+          "type": "file_read"
+        },
+        {
+          "name": "reads_layout_mapping_reference",
+          "description": "Reads references/layout-mapping.md during implementation",
+          "type": "file_read"
+        },
+        {
+          "name": "uses_project_tokens",
+          "description": "Uses the project's discovered token system (not raw literals)",
+          "type": "output_contains"
+        },
+        {
+          "name": "audits_shared_widgets",
+          "description": "Checks lib/widgets/ or similar for existing shared widgets",
+          "type": "file_read"
+        },
+        {
+          "name": "reuses_shared_widgets",
+          "description": "Actually uses discovered shared widgets in the output",
+          "type": "output_contains"
+        },
+        {
+          "name": "does_not_invoke_figma_implement_design",
+          "description": "Does NOT invoke figma:figma-implement-design skill",
+          "type": "tool_call_absent"
+        },
+        {
+          "name": "widget_is_class_not_function",
+          "description": "Widget is a class extending StatelessWidget or StatefulWidget",
+          "type": "output_contains"
+        }
+      ]
+    }
+  ]
+}
